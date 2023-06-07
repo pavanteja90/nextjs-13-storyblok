@@ -1,7 +1,5 @@
-import { storyblokEditable } from "@storyblok/react/rsc";
+import { storyblokEditable, renderRichText } from "@storyblok/react/rsc";
 import { Converter } from "showdown";
-import { renderRichText } from "@storyblok/js";
-
 
 const SubText = ({ blok }: { blok: any }) => {
   return (
@@ -13,7 +11,7 @@ const SubText = ({ blok }: { blok: any }) => {
       ></div>
       <div
         dangerouslySetInnerHTML={{
-          __html: blok?.RtSubtext && renderRichText(blok.RtSubtext),
+          __html: blok?.MdSubtext && convertRichtextToHtml(blok.RtSubtext),
         }}
       ></div>
     </div>
@@ -24,6 +22,12 @@ const convertMarkdownToHtml = (markdown: string) => {
   const converter = new Converter();
   const html = converter.makeHtml(markdown);
   return html;
+};
+
+const convertRichtextToHtml = (richtext) => {
+  const renderedContent = renderRichText(richtext);
+  console.log(renderedContent);
+  return renderedContent;
 };
 
 export default SubText;

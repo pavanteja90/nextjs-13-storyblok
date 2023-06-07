@@ -18,7 +18,7 @@ mkcert -install
 mkcert localhost
 
 # Install the HTTPS proxy and run the proxy
-npm install -g local-ssl-proxy
+pnpm install -g local-ssl-proxy
 # Running the proxy to target port 3000, you can change that any port of your choice but it should be what your app is running on in development.
 local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem  
 # HTTPS is now running on port 3010 and forwarding requests to http 3000.
@@ -33,11 +33,11 @@ STORYBLOK_API_TOKEN="XXXXXXXXXXXXXXXXXXXXX"
 Then, run the development server:
 
 ```bash
+pnpm dev
+# or
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
