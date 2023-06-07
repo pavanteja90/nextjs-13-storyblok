@@ -1,8 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and used to integrate with storyblok.
 
 ## Getting Started
 
-First, run the development server:
+### Install https proxy for storyblok
+
+Linux/Ubuntu users:
+
+```bash
+# Install libss3-tools and mkcert
+sudo apt install libnss3-tools -y
+wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-linux-amd64
+sudo cp mkcert-v1.4.4-linux-amd64 /usr/local/bin/mkcert
+sudo chmod +x /usr/local/bin/mkcert
+
+# Generate local certificates
+mkcert -install
+mkcert localhost
+
+# Install the HTTPS proxy and run the proxy
+npm install -g local-ssl-proxy
+# Running the proxy to target port 3000, you can change that any port of your choice but it should be what your app is running on in development.
+local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem  
+# HTTPS is now running on port 3010 and forwarding requests to http 3000.
+```
+
+### Env variables
+Create .env.local file in the root level and add storyblok api token as:
+```
+STORYBLOK_API_TOKEN="XXXXXXXXXXXXXXXXXXXXX"
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -32,25 +60,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## Installing https proxy for storyblok
-
-Linux/Ubuntu users:
-
-```bash
-# Install libss3-tools and mkcert
-sudo apt install libnss3-tools -y
-wget https://github.com/FiloSottile/mkcert/releases/download/v1.4.4/mkcert-v1.4.4-linux-amd64
-sudo cp mkcert-v1.4.4-linux-amd64 /usr/local/bin/mkcert
-sudo chmod +x /usr/local/bin/mkcert
-
-# Generate local certificates
-mkcert -install
-mkcert localhost
-
-# Install the HTTPS proxy and run the proxy
-npm install -g local-ssl-proxy
-# Running the proxy to target port 3000, you can change that any port of your choice but it should be what your app is running on in development.
-local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem  
-# HTTPS is now running on port 3010 and forwarding requests to http 3000.
-```
