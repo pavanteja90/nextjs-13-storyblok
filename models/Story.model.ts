@@ -1,18 +1,18 @@
-export default interface Story {
+export interface Story {
   id: string;
-  story: StoryData;
+  story: StoryInfo;
   cv?: number;
   rels?: any[];
   links?: any[];
 }
 
-interface StoryData {
+export interface StoryInfo {
   name: string;
   created_at: Date;
   published_at?: Date;
   id: number;
   uuid: string;
-  content: any;
+  content: StoryContent;
   slug: string;
   full_slug: string;
   sort_by_date?: Date;
@@ -29,4 +29,19 @@ interface StoryData {
   alternates?: any[];
   default_full_slug?: string;
   translated_slugs?: string;
+}
+
+export interface StoryContent {
+  _uid: string;
+  body: Block[];
+  component: string;
+  _editable: string;
+}
+
+export interface Block {
+  _uid: string;
+  columns?: Block[];
+  component: string;
+  _editable: string;
+  [key: string]: any;
 }
