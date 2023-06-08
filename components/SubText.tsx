@@ -1,7 +1,8 @@
+import { Block } from "@/models/Story.model";
 import { storyblokEditable, renderRichText } from "@storyblok/react/rsc";
 import { Converter } from "showdown";
 
-const SubText = ({ blok }: { blok: any }) => {
+const SubText = ({ blok }: { blok: Block }) => {
   return (
     <div {...storyblokEditable(blok)}>
       <div
@@ -24,9 +25,8 @@ const convertMarkdownToHtml = (markdown: string) => {
   return html;
 };
 
-const convertRichtextToHtml = (richtext) => {
+const convertRichtextToHtml = (richtext: any) => {
   const renderedContent = renderRichText(richtext);
-  console.log(renderedContent);
   return renderedContent;
 };
 
