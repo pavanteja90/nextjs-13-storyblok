@@ -1,6 +1,6 @@
 import React from "react";
 
-const getProducts = async () => {
+const getProducts = async (): Promise<any> => {
   const res = await fetch(`${process.env.API_ENDPOINT}/api/mock`);
   if (!res.ok) {
     throw new Error("Failed to fetch data");

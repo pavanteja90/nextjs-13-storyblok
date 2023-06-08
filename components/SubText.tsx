@@ -24,7 +24,7 @@ const convertMarkdownToHtml = (markdown: string) => {
   return html;
 };
 
-const convertRichtextToHtml = (richtext) => {
+const convertRichtextToHtml = (richtext: any) => {
   const renderedContent = renderRichText(richtext);
   console.log(renderedContent);
   return renderedContent;
