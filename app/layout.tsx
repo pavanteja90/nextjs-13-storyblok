@@ -11,6 +11,7 @@ import HeaderText from "@/components/HeaderText";
 import SRTitle from "@/components/star-ratings/title/Title";
 import SRDescription from "@/components/star-ratings/description/description";
 import Navbar from "@/components/Navbar";
+import SRDivider from "@/components/star-ratings/divider";
 
 export const metadata = {
   title: "Storyblok and Next.js 13",
@@ -28,6 +29,7 @@ const components = {
   srTitle: SRTitle,
   srDescription: SRDescription,
   navbar: Navbar,
+  divider: SRDivider,
 };
 
 storyblokInit({
