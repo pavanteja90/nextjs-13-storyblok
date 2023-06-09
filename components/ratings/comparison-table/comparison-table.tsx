@@ -67,7 +67,7 @@ const TableDataCellLogo = ({ record }: { record: any }) => {
     <div className="table-data-cell align-center">
       <Image
         src={record.imageUrl}
-        alt={record.branda}
+        alt={record.brand}
         width={100}
         height={35}
         style={{
