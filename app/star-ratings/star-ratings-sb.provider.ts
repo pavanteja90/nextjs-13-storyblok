@@ -2,6 +2,7 @@
 "use client";
 import SRDescription from "@/components/star-ratings/description/description";
 import SRDivider from "@/components/star-ratings/divider";
+import SRImportantNotes from "@/components/star-ratings/important-notes/important-notes";
 import SRTitle from "@/components/star-ratings/title/Title";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 
@@ -10,6 +11,7 @@ const components = {
   srTitle: SRTitle,
   srDescription: SRDescription,
   divider: SRDivider,
+  srImportantNotes: SRImportantNotes
 };
 
 /** 2. Initialize it as usual */
