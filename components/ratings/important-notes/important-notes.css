@@ -4,7 +4,7 @@
 
 .sr-note-button {
   width: 100%;
-  background-color: #f4f3f8;
+  background-color: #F5F5F5;
   color: #009ADE;
   height: rem(35px);
   position: relative;
@@ -13,4 +13,13 @@
   border: none;
   outline: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+.sr-caret-icon {
+  filter: invert(51%) sepia(92%) saturate(4571%) hue-rotate(173deg) brightness(101%) contrast(102%);
+  width: rem(5px);
+  height: rem(5px);
 }
