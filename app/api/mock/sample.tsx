@@ -5,29 +5,29 @@ const data = [
     lastUpdatedOn: "2023-01-01 00:00:00 +10:00 UTC",
     columns: [
       {
-        label: "Overall satisfaction",
+        label: "Overall satisfaction*",
         standardColumn: true,
       },
       {
-        label: "Taste and freshness",
-        standardColumn: false,
+        label: "Taste and freshness of ingredients / meals",
+        standardColumn: true,
       },
       {
         label: "Value for money",
-        standardColumn: false,
+        standardColumn: true,
       },
       {
         label: "Speed of service",
-        standardColumn: false,
-      },
-      {
-        label: "Presentation of food",
         standardColumn: true,
       },
-      {
-        label: "Customer service",
-        standardColumn: true,
-      },
+      // {
+      //   label: "Presentation of food",
+      //   standardColumn: false,
+      // },
+      // {
+      //   label: "Customer service",
+      //   standardColumn: false,
+      // },
     ],
     records: [
       {
@@ -40,7 +40,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_GUZYGO_logo.png",
         isMonetised: true,
         url: "https://www.guzmanygomez.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -58,7 +58,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_SUBW_logo.png",
         isMonetised: true,
         url: "https://www.subway.com/en-au",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -76,7 +76,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_ZAMBRO_logo.png",
         isMonetised: true,
         url: "https://www.zambrero.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -94,7 +94,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_REDRO_logo.png",
         isMonetised: true,
         url: "https://www.redrooster.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -112,7 +112,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_NAND_logo.png",
         isMonetised: true,
         url: "https://www.nandos.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -130,7 +130,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_GRILLD_logo.png",
         isMonetised: true,
         url: "https://www.grilld.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -148,7 +148,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_HUNJA_logo.png",
         isMonetised: true,
         url: "https://www.hungryjacks.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -166,7 +166,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_KFC_logo.png",
         isMonetised: true,
         url: "https://www.kfc.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -184,7 +184,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_OPOR_logo.png",
         isMonetised: true,
         url: "https://www.oporto.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
@@ -202,7 +202,7 @@ const data = [
           "https://cdn.canstarblue.com.au/bluesr/images/brands/blue_small_MCDO_logo.png",
         isMonetised: true,
         url: "https://mcdonalds.com.au/",
-        columns: [3, 2, 3, 4, 5, 3],
+        columns: [3, 2, 3, 4], //, 5, 3],
         userRatings: [
           {
             author: "Ricky",
