@@ -1,11 +1,32 @@
-import './description.css';
+import "./top-performer.css";
 import { Block } from "@/models/Story.model";
 import { storyblokEditable } from "@storyblok/react/rsc";
+import Image from "next/image";
 
 const SRTopPerformer = ({ blok }: { blok: Block }) => {
   return (
     <div {...storyblokEditable(blok)}>
-      <h1 className="sr-description">{blok.text}</h1>
+      <div className="card">
+        <Image
+          src={blok.canstarAward.filename}
+          alt="Preview of Navbar"
+          width={200}
+          height={200}
+          key={blok.canstarAward.id}
+        />
+        <section className="performer-info">
+          <p className="title">{blok.title}</p>
+          <p className="provider">{blok.providerName}</p>
+          <p className="description">{blok.description}</p>
+        </section>
+        <Image
+          src={blok.providerLogo.filename}
+          alt="Preview of Navbar"
+          width={250}
+          height={200}
+          key={blok.providerLogo.id}
+        />
+      </div>
     </div>
   );
 };
