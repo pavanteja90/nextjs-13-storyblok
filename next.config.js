@@ -9,7 +9,9 @@ const nextConfig = {
         ],
         domains: [
             "www.canstarblue.com.au",
-            "cdn.canstarblue.com.au"]
+            "cdn.canstarblue.com.au",
+            "localhost"
+        ]
     }
 };
 
