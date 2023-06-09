@@ -1,11 +1,15 @@
-.card {
+.flex {
   padding: 0 6.25rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   column-gap: 2rem;
+}
+
+.card {
   border-radius: 0.25rem;
-  box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.12), 0 0.0625rem 0.125rem rgba(0,0,0,0.24);
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.12),
+    0 0.0625rem 0.125rem rgba(0, 0, 0, 0.24);
 }
 
 .performer-info p {
@@ -23,7 +27,7 @@ p.title {
 }
 
 .title::after {
-  content: url('/underline.svg');
+  content: url("/underline.svg");
   display: block;
   position: relative;
   height: 0.25rem;

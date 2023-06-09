@@ -6,7 +6,7 @@ import Image from "next/image";
 const SRTopPerformer = ({ blok }: { blok: Block }) => {
   return (
     <div {...storyblokEditable(blok)}>
-      <div className="card">
+      <div className="flex">
         <Image
           src={blok.canstarAward.filename}
           alt="Preview of Navbar"
