@@ -7,6 +7,7 @@ import Grid from "@/components/Grid";
 import Teaser from "@/components/Teaser";
 import Page from "@/components/Page";
 import SubText from "@/components/SubText";
+import BlueSrTable from "@/components/BlueSrTable";
 
 export const metadata = {
   title: "Storyblok and Next.js 13",
@@ -20,6 +21,7 @@ const components = {
   teaser: Teaser,
   page: Page,
   subtext: SubText,
+  blueSrTable: BlueSrTable,
 };
 
 console.warn(

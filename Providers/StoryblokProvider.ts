@@ -1,5 +1,6 @@
 /** 1. Tag it as a client component */
 "use client";
+import BlueSrTable from "@/components/BlueSrTable";
 import Feature from "@/components/Feature";
 import Grid from "@/components/Grid";
 import Page from "@/components/Page";
@@ -14,6 +15,7 @@ const components = {
   teaser: Teaser,
   page: Page,
   subtext: SubText,
+  blueSrTable: BlueSrTable,
 };
 
 /** 2. Initialize it as usual */
