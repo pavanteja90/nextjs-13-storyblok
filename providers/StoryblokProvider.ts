@@ -28,5 +28,14 @@ storyblokInit({
 });
 
 export default function StoryblokProvider({ children }: { children: any }) {
+  // TODO: Do some research on storyblok bridge
+  // // Initialize the Storyblok JS Bridge
+  // const { StoryblokBridge, location } = window;
+  // const storyblokInstance = new StoryblokBridge();
+
+  // storyblokInstance.on(["published", "change"], () => {
+  //   // reload page if save or publish is clicked
+  //   location.reload();
+  // });
   return children;
 }

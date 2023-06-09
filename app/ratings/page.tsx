@@ -1,10 +1,10 @@
 import { fetchDraftStoryContent } from "@/services/fetch-data.service";
 import { StoryblokComponent } from "@storyblok/react/rsc";
-import SRSbProvider from "./star-ratings-sb.provider";
+import SRSbProvider from "./ratings-sb.provider";
 import { Block } from "@/models/Story.model";
 
 export default async function StarRatings() {
-  const storyContent = await fetchDraftStoryContent("star-ratings");
+  const storyContent = await fetchDraftStoryContent("ratings");
   return (
     <SRSbProvider>
       {storyContent ? (

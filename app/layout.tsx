@@ -8,15 +8,15 @@ import Teaser from "@/components/Teaser";
 import Page from "@/components/Page";
 import SubText from "@/components/SubText";
 import HeaderText from "@/components/HeaderText";
-import SRTitle from "@/components/star-ratings/title/Title";
-import SRDescription from "@/components/star-ratings/description/description";
+import SRTitle from "@/components/ratings/title/Title";
+import SRDescription from "@/components/ratings/description/description";
 import Navbar from "@/components/Navbar";
-import SRDivider from "@/components/star-ratings/divider";
-import SRImportantNotes from "@/components/star-ratings/important-notes/important-notes";
+import SRDivider from "@/components/ratings/divider";
+import SRImportantNotes from "@/components/ratings/important-notes/important-notes";
 
 export const metadata = {
-  title: "Storyblok and Next.js 13",
-  description: "A Next.js and Storyblok app using app router ",
+  title: "Canstar Blue | Star ratings PoC",
+  description: "Proof of concept developed for Canstar using Next.js 13 with app router and Storyblok",
 };
 
 /** Import your components */
