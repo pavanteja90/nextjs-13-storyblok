@@ -6,7 +6,7 @@ export default async function Home() {
   const storyContent = await fetchDraftStoryContent("home");
   return (
     <StoryblokProvider>
-      {storyContent ? (
+      {storyContent._uid ? (
         <StoryblokComponent blok={storyContent} key={storyContent._uid} />
       ) : (
         <h4>
