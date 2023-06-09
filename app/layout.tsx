@@ -14,6 +14,7 @@ import Navbar from "@/components/Navbar";
 import SRDivider from "@/components/ratings/divider";
 import SRImportantNotes from "@/components/ratings/important-notes/important-notes";
 import SRTopPerformer from "@/components/ratings/top-performer/top-performer";
+import SRComparisonTable from "@/components/ratings/comparison-table/comparison-table";
 
 export const metadata = {
   title: "Canstar Blue | Star ratings PoC",
@@ -35,6 +36,7 @@ const components = {
   divider: SRDivider,
   srImportantNotes: SRImportantNotes,
   topPerformer: SRTopPerformer,
+  srComparisonTable: SRComparisonTable
 };
 
 storyblokInit({

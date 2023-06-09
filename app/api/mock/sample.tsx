@@ -195,7 +195,7 @@ const data = [
       {
         brand: "McDonald's",
         brandCode: "MCDO",
-        brandId: "450",
+        brandId: "386",
         year: "2023",
         "Absolute O.S": 8.5,
         imageUrl:

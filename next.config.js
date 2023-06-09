@@ -6,7 +6,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'a.storyblok.com'
             }
-        ]
+        ],
+        domains: [
+            "www.canstarblue.com.au",
+            "cdn.canstarblue.com.au"]
     }
 };
 

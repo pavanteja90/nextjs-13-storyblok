@@ -7,6 +7,7 @@ import Navbar from "@/components/Navbar";
 import Page from "@/components/Page";
 import SubText from "@/components/SubText";
 import Teaser from "@/components/Teaser";
+import SRComparisonTable from "@/components/ratings/comparison-table/comparison-table";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 
 /** Import your components */
@@ -18,6 +19,7 @@ const components = {
   subtext: SubText,
   headerText: HeaderText,
   navbar: Navbar,
+  srComparisonTable: SRComparisonTable
 };
 
 /** 2. Initialize it as usual */
