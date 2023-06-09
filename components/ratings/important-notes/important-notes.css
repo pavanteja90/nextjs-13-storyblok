@@ -1,0 +1,16 @@
+.sr-note-container {
+  width: 100%;
+}
+
+.sr-note-button {
+  width: 100%;
+  background-color: #f4f3f8;
+  color: #009ADE;
+  height: rem(35px);
+  position: relative;
+  text-align: left;
+  padding: rem(4px);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
