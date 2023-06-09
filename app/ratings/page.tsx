@@ -11,7 +11,7 @@ export default async function StarRatings() {
         storyContent.body.map((nestedBlok: Block) => (
           <section
             key={nestedBlok._uid}
-            style={{ margin: nestedBlok.component != "navbar" ? 40 : 0 }}
+            style={{ margin: nestedBlok.component != "navbar" ? '40px 0' : 0 }}
           >
             <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
           </section>
