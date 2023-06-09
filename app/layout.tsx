@@ -13,10 +13,12 @@ import SRDescription from "@/components/ratings/description/description";
 import Navbar from "@/components/Navbar";
 import SRDivider from "@/components/ratings/divider";
 import SRImportantNotes from "@/components/ratings/important-notes/important-notes";
+import SRTopPerformer from "@/components/ratings/top-performer/top-performer";
 
 export const metadata = {
   title: "Canstar Blue | Star ratings PoC",
-  description: "Proof of concept developed for Canstar using Next.js 13 with app router and Storyblok",
+  description:
+    "Proof of concept developed for Canstar using Next.js 13 with app router and Storyblok",
 };
 
 /** Import your components */
@@ -31,7 +33,8 @@ const components = {
   srDescription: SRDescription,
   navbar: Navbar,
   divider: SRDivider,
-  srImportantNotes: SRImportantNotes
+  srImportantNotes: SRImportantNotes,
+  topPerformer: SRTopPerformer,
 };
 
 storyblokInit({

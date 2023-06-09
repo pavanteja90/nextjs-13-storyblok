@@ -5,13 +5,15 @@ import SRDivider from "@/components/ratings/divider";
 import SRTitle from "@/components/ratings/title/Title";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import SRImportantNotes from "@/components/ratings/important-notes/important-notes";
+import SRTopPerformer from "@/components/ratings/top-performer/top-performer";
 
 /** Import your components */
 const components = {
   srTitle: SRTitle,
   srDescription: SRDescription,
   divider: SRDivider,
-  srImportantNotes: SRImportantNotes
+  srImportantNotes: SRImportantNotes,
+  topPerformer: SRTopPerformer,
 };
 
 /** 2. Initialize it as usual */

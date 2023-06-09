@@ -1,0 +1,50 @@
+.card {
+  padding: 0 6.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.0625rem 0.1875rem rgba(0,0,0,0.12), 0 0.0625rem 0.125rem rgba(0,0,0,0.24);
+}
+
+.performer-info p {
+  margin: 1rem 0;
+}
+
+p.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  /* Blue / Dark Blue */
+  color: #006098;
+  margin-bottom: 0;
+}
+
+.title::after {
+  content: url('/underline.svg');
+  display: block;
+  position: relative;
+  height: 0.25rem;
+  top: -1rem;
+}
+
+p.provider {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  /* Neutrals / Black */
+  color: #212121;
+  margin-top: 0;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* Neutrals / Black */
+  color: #212121;
+}
