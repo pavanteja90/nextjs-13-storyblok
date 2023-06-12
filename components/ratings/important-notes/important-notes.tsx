@@ -42,7 +42,7 @@ const SRImportantNotes = ({ blok }: { blok: Block }) => {
         <img className="sr-caret-icon" src={noteIcon} alt="caret-icon" />
       </button>
 
-      <div className='p-3'
+      <div className='p-3 text-sm'
         style={{ display: isShowing ? "block" : "none" }}
         dangerouslySetInnerHTML={{
           __html: blok?.notes && convertRichtextToHtml(blok.notes),
