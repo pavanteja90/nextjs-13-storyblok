@@ -1,5 +1,5 @@
 import { StoryblokComponent } from "@storyblok/react/rsc";
-import StoryblokProvider from "@/providers/StoryblokProvider";
+import StoryblokProvider from "@/providers/storyblok.provider";
 import { fetchDraftStoryContent } from "@/services/fetch-data.service";
 
 export default async function Home() {

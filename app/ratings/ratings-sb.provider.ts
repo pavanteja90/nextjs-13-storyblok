@@ -2,7 +2,7 @@
 "use client";
 import SRDescription from "@/components/ratings/description/description";
 import SRDivider from "@/components/ratings/divider";
-import SRTitle from "@/components/ratings/title/Title";
+import SRTitle from "@/components/ratings/title/title";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import SRImportantNotes from "@/components/ratings/important-notes/important-notes";
 import SRTopPerformer from "@/components/ratings/top-performer/top-performer";

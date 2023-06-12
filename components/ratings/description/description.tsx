@@ -1,4 +1,4 @@
-import './description.css';
+import './description.scss';
 import { Block } from "@/models/Story.model";
 import { storyblokEditable } from "@storyblok/react/rsc";
 

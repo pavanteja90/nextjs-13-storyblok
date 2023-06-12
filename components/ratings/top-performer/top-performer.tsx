@@ -1,4 +1,4 @@
-import "./top-performer.css";
+import "./top-performer.scss";
 import { Block } from "@/models/Story.model";
 import { storyblokEditable } from "@storyblok/react/rsc";
 import Image from "next/image";
@@ -8,6 +8,7 @@ const SRTopPerformer = ({ blok }: { blok: Block }) => {
     <div {...storyblokEditable(blok)}>
       <div className="flex">
         <Image
+          className="award"
           src={blok.canstarAward.filename}
           alt="Preview of Navbar"
           width={200}
@@ -20,6 +21,7 @@ const SRTopPerformer = ({ blok }: { blok: Block }) => {
           <p className="description">{blok.description}</p>
         </section>
         <Image
+        className="provider"
           src={blok.providerLogo.filename}
           alt="Preview of Navbar"
           width={250}

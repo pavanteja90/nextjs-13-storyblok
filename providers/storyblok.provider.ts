@@ -1,12 +1,12 @@
 /** 1. Tag it as a client component */
 "use client";
-import Feature from "@/components/Feature";
-import Grid from "@/components/Grid";
-import HeaderText from "@/components/HeaderText";
-import Navbar from "@/components/Navbar";
-import Page from "@/components/Page";
-import SubText from "@/components/SubText";
-import Teaser from "@/components/Teaser";
+import Feature from "@/components/feature";
+import Grid from "@/components/grid";
+import HeaderText from "@/components/headertext";
+import Navbar from "@/components/navbar";
+import Page from "@/components/page";
+import SubText from "@/components/subtext";
+import Teaser from "@/components/teaser";
 import SRComparisonTable from "@/components/ratings/comparison-table/comparison-table";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 

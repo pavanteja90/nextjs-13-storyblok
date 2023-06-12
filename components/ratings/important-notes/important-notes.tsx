@@ -1,5 +1,5 @@
 'use client';
-import './important-notes.css';
+import './important-notes.scss';
 import { Block } from "@/models/Story.model";
 import { storyblokEditable, renderRichText } from "@storyblok/react/rsc";
 import { useState } from 'react';
