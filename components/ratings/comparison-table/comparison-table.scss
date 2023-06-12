@@ -1,39 +1,35 @@
 .sr-comparison-table {
   width: 100%;
+  padding: 0 15px;
 
   .table-head-row {
     background: #fbfbfb;
     color: #000000;
-    font-size: 16px;
     font-weight: 600;
-    line-height: 24px;
     letter-spacing: 0em;
     border-radius: 6px;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     .table-head-cell {
-      padding: 0 10px;
-      margin: 0 12px;
-      width: 170px;
-      height: 92px;
-      text-align: center;
+      padding: 10px;
     }
   }
 
   .table-data-row {
     margin: 12px 0;
-    height: 65px;
     box-shadow: 0px 3px 8px rgba(12, 35, 64, 0.1);
     border-radius: 6px;
 
-    .table-data-cell {
-      width: 170px;
-      margin: 0 12px;
-    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
     button {
-      padding: 8px 15px;
-      width: 170px;
-      height: 41px;
       background: #25cca8;
       box-shadow: 0px 3px 5px rgba(12, 35, 64, 0.1);
       border-radius: 6px;
@@ -43,14 +39,131 @@
       line-height: 13px;
       color: #ffffff;
     }
+
   }
 
   .align-center {
-    display: flex; 
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    // background-color: rgba(255, 0, 0, 0.382);
+    text-align: center;
   }
 
+  [class*="column-number"] {
+    display: none;
+  }
+
+  @media only screen and (max-width: 767px) {
+    /* For mobile phones: */
+
+    .table-head-row {
+      font-size: 11px;
+      line-height: 15px;
+    }
+
+    .table-data-row {
+      height: 60px;
+    }
+
+    .column-logo {
+      width: 100px;
+
+      img {
+        width: 70px;
+        height: 25px;
+        object-fit: contain;
+      }
+
+    }
+
+    .column-cta,
+    .column-number-0 {
+      display: flex;
+      width: 120px;
+    }
+
+    button {
+      height: 30px;
+      width: 100px ;
+    }
+
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* For tablets: */
+    padding: 0 15px;
+
+    .table-head-row {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .table-data-row {
+      height: 55px;
+    }
+
+    .column-cta {
+      width: 110px;
+    }
+
+    button {
+      height: 30px;
+      width: 92px ;
+    }
+
+    .column-logo {
+      img {
+        width: 100px;
+        height: 35px;
+        object-fit: contain;
+      }
+    }
+
+    .column-number-0,
+    .column-number-1,
+    .column-number-2,
+    .column-logo {
+      display: flex;
+      width: 137px;
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    /* For desktops: */
+
+    .table-head-row {
+      font-size: 16px;
+      line-height: 24px;
+      padding: 0 15px;
+    }
+
+    .table-data-row {
+      padding: 0 15px;
+      height: 65px;
+    }
+
+    button {
+      height: 40px;
+      width: 170px;
+    }
+
+    .column-logo {
+      img {
+        width: 100px;
+        height: 35px;
+        object-fit: contain;
+      }
+    }
+
+    .column-number-0,
+    .column-number-1,
+    .column-number-2,
+    .column-number-3,
+    .column-logo,
+    .column-cta {
+      display: flex;
+      width: 170px;
+    }
+  }
 }

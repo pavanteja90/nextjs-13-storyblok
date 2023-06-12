@@ -28,18 +28,34 @@ const starRatingImagery = [
 
 const TableHeadRows = ({ columns }: { columns: any[] }) => {
   return (
-    <div className="table-head-row align-center">
-      <TableHeadCell label="Rated brand" />
-      {columns.map((col: any) => {
-        return <TableHeadCell key={col.label} label={col.label} />;
+    <div className="table-head-row">
+      <TableHeadCell label="Rated brand" position="logo" />
+      {columns.map((col: any, idx: number) => {
+        return (
+          <TableHeadCell
+            key={col.label}
+            label={col.label}
+            position={`number-${idx}`}
+          />
+        );
       })}
-      <TableHeadCell label="Shop online" />
+      <TableHeadCell label="Shop online" position="cta" />
     </div>
   );
 };
 
-const TableHeadCell = ({ label }: { label: string }) => {
-  return <div className="table-head-cell align-center">{label}</div>;
+const TableHeadCell = ({
+  label,
+  position,
+}: {
+  label: string;
+  position: string;
+}) => {
+  return (
+    <div className={`table-head-cell align-center column-${position}`}>
+      {label}
+    </div>
+  );
 };
 
 const TableDataRows = ({ records }: { records: any[] }) => {
@@ -47,14 +63,14 @@ const TableDataRows = ({ records }: { records: any[] }) => {
     <>
       {records.map((record: any) => {
         return (
-          <div key={record.brandId} className="table-data-row align-center">
+          <div key={record.brandId} className="table-data-row">
             <TableDataCellLogo record={record} />
             {record.columns.map((starValue: any, idx: number) => {
               return (
-                <TableDataCell key={idx} starValue={starValue} />
+                <TableDataCell key={idx} starValue={starValue} position={idx} />
               );
             })}
-            <TableDataCellCTA columns={[]} />
+            <TableDataCellCTA />
           </div>
         );
       })}
@@ -64,25 +80,21 @@ const TableDataRows = ({ records }: { records: any[] }) => {
 
 const TableDataCellLogo = ({ record }: { record: any }) => {
   return (
-    <div className="table-data-cell align-center">
-      <Image
-        src={record.imageUrl}
-        alt={record.brand}
-        width={100}
-        height={35}
-        style={{
-          height: "35px",
-          width: "100px",
-          objectFit: "contain",
-        }}
-      />
+    <div className={`table-data-cell align-center column-logo`}>
+      <Image src={record.imageUrl} alt={record.brand} width={100} height={35} />
     </div>
   );
 };
 
-const TableDataCell = ({ starValue }: { starValue: number }) => {
+const TableDataCell = ({
+  starValue,
+  position,
+}: {
+  starValue: number;
+  position: number;
+}) => {
   return (
-    <div className="table-data-cell align-center">
+    <div className={`table-data-cell align-center column-number-${position}`}>
       <Image
         src={starRatingImagery[starValue]}
         width={75}
@@ -93,9 +105,9 @@ const TableDataCell = ({ starValue }: { starValue: number }) => {
   );
 };
 
-const TableDataCellCTA = ({ columns }: { columns: any[] }) => {
+const TableDataCellCTA = () => {
   return (
-    <div className="table-data-cell">
+    <div className="table-data-cell align-center column-cta">
       <button>Buy now</button>
     </div>
   );
