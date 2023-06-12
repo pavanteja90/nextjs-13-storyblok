@@ -21,7 +21,7 @@ const SRImportantNotes = ({ blok }: { blok: Block }) => {
 
 
   const toggle = () => {
-    setIsShowing(!isShowing);
+    setIsShowing((prevState) => !prevState);
 
     let text = showContent.text;
     let icon = showContent.icon;
@@ -38,7 +38,7 @@ const SRImportantNotes = ({ blok }: { blok: Block }) => {
         onClick={toggle}
         type="button"
       >
-        <p className="px-3 py-2 flex text-sm">{noteTitle}</p>
+        <p className="px-3 py-2 text-sm">{noteTitle}</p>
         <img className="sr-caret-icon" src={noteIcon} alt="caret-icon" />
       </button>
 
