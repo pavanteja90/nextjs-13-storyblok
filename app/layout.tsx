@@ -10,7 +10,7 @@ import SubText from "@/components/subtext";
 import HeaderText from "@/components/headertext";
 import SRTitle from "@/components/ratings/title/title";
 import SRDescription from "@/components/ratings/description/description";
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/navbar/navbar";
 import SRDivider from "@/components/ratings/divider";
 import SRImportantNotes from "@/components/ratings/important-notes/important-notes";
 import SRTopPerformer from "@/components/ratings/top-performer/top-performer";

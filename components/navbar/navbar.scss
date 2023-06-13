@@ -1,0 +1,15 @@
+img.navbar-desktop, img.navbar-tablet {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  img.navbar-desktop {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  img.navbar-tablet {
+    display: block;
+  }
+}
