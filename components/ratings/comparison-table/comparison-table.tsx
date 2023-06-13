@@ -12,10 +12,7 @@ const getProducts = async (vertical: string): Promise<any> => {
       "Content-Type": "application/json",
     },
   };
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_API_ENDPOINT}/api/mock`,
-    options
-  );
+  const res = await fetch("/api/mock", options);
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
