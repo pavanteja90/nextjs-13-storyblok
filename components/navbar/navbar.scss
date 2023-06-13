@@ -1,15 +1,23 @@
-img.navbar-desktop, img.navbar-tablet {
+img.navbar-desktop,
+img.navbar-tablet,
+img.navbar-mobile {
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   img.navbar-desktop {
     display: block;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
   img.navbar-tablet {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  img.navbar-mobile {
     display: block;
   }
 }

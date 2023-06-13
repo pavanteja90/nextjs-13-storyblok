@@ -19,8 +19,16 @@ const Navbar = ({ blok }: { blok: Block }) => {
           src={blok.tabletImage.filename}
           alt="Preview of Navbar"
           width={2000}
-          height={400}
+          height={200}
           key={blok.tabletImage.id}
+        />
+        <Image
+        className="navbar-mobile"
+          src={blok.mobileImage.filename}
+          alt="Preview of Navbar"
+          width={2000}
+          height={200}
+          key={blok.mobileImage.id}
         />
     </div>
   );
