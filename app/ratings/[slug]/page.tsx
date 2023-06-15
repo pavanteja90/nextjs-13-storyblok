@@ -11,7 +11,7 @@ export default async function StarRatings({
   const storyContent = await fetchDraftStoryContent("ratings/" + params.slug);
   return (
     <SRSbProvider>
-      {storyContent._uid ? (
+      {storyContent?._uid ? (
         storyContent.body.map((nestedBlok: Block) => (
           <section
             key={nestedBlok._uid}

@@ -3,7 +3,7 @@ import { Story, StoryContent, StoryInfo } from "@/models/Story.model";
 export async function fetchDraftStoryContent(
   slug: string
 ): Promise<StoryContent> {
-  try{
+  try {
     const story = await fetchDraftStory(slug);
     return story?.content;
   } catch (error) {
@@ -23,5 +23,20 @@ export async function fetchDraftStory(slug: string): Promise<StoryInfo> {
     return (await story).story;
   } catch (error) {
     throw new Error(`Unable to fetch draft story info: ${error}`);
+  }
+}
+
+export async function fetchDraftStories(folder: string): Promise<StoryInfo[]> {
+  try {
+    // Load the draft version
+    const sbParams = { version: "draft" };
+    const response = await fetch(
+      `https://api.storyblok.com/v2/cdn/stories?version=${sbParams.version}&starts_with=${folder}/&token=${process.env.STORYBLOK_API_TOKEN}`,
+      { cache: "no-store" }
+    );
+    const stories: Promise<{stories: StoryInfo[]}> = response.json();
+    return (await stories).stories;
+  } catch (error) {
+    throw new Error(`Unable to fetch draft stories from folder ${folder}: ${error}`);
   }
 }
