@@ -4,14 +4,14 @@ import SRSbProvider from "./ratings-sb.provider";
 import { Block } from "@/models/Story.model";
 
 export default async function StarRatings() {
-  const storyContent = await fetchDraftStoryContent("ratings");
+  const storyContent = await fetchDraftStoryContent("ratings-old");
   return (
     <SRSbProvider>
       {storyContent._uid ? (
         storyContent.body.map((nestedBlok: Block) => (
           <section
             key={nestedBlok._uid}
-            style={{ margin: nestedBlok.component != "navbar" ? '40px 0' : 0 }}
+            style={{ margin: nestedBlok.component != "navbar" ? '2.5rem 0' : 0 }}
           >
             <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
           </section>
